@@ -7,6 +7,3 @@ Admin can restrict user to access the block
 Admin can see who responded to the Mad lib
 Admin can do settings in the configuration area
 
-## Credits
-
-Developer: Blessen Thomas
