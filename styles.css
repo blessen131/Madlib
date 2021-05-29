@@ -1,0 +1,24 @@
+#page-blocks-madlib-tabs .singleselect {
+  text-align: left;
+  margin: 0;
+}
+
+#page-blocks-madlib-tabs .field_title {
+  float: left;
+}
+
+#page-blocks-madlib-tabs a img {
+  background: transparent;
+  padding: 0 5px;
+}
+
+.block_madlib div.center {
+  padding: 2px;
+  margin-bottom: 0;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.block_madlib div.center:first-letter {
+  text-transform: capitalize;
+}

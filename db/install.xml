@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/madlib/db" VERSION="20080101" COMMENT="XMLDB file for Moodle madlib block"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+
+    <TABLE NAME="block_madlib" COMMENT="Contains madlibs for the madlib block">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" />
+        <FIELD NAME="name" TYPE="char" LENGTH="64" NOTNULL="true" SEQUENCE="false" />
+        <FIELD NAME="courseid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" />
+        <FIELD NAME="questiontext" TYPE="text" LENGTH="big" NOTNULL="true" SEQUENCE="false" />
+        <FIELD NAME="eligible" TYPE="char" LENGTH="10" NOTNULL="true" DEFAULT="all" SEQUENCE="false" />
+        <FIELD NAME="created" TYPE="int" LENGTH="10" NOTNULL="true" DEFAULT="0" SEQUENCE="false" />
+        <FIELD NAME="anonymous" TYPE="int" LENGTH="2" NOTNULL="true" DEFAULT="0" SEQUENCE="false" />
+        <FIELD NAME="locked" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+    </TABLE>
+
+    <TABLE NAME="block_madlib_option" COMMENT="Contains options for each madlib in the madlib block">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" />
+        <FIELD NAME="madlibid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" />
+        <FIELD NAME="optiontext" TYPE="text" LENGTH="big" NOTNULL="true" SEQUENCE="false" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+    </TABLE>
+
+    <TABLE NAME="block_madlib_response" COMMENT="Contains response info for each madlib in the madlib block">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" />
+        <FIELD NAME="madlibid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" />
+        <FIELD NAME="optionid" TYPE="text" LENGTH="big" NOTNULL="true" SEQUENCE="false" />
+        <FIELD NAME="userid" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" />
+        <FIELD NAME="submitted" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" DEFAULT="0" SEQUENCE="false" />
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+      </KEYS>
+    </TABLE>
+
+  </TABLES>
+</XMLDB>
